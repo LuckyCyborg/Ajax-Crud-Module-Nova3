@@ -3,17 +3,17 @@ namespace App\Modules\Crud\Controllers;
 
 use App\Core\BackendController;
 use App\Modules\Crud\Models\Crud as CrudModel;
+use Assets;
 use Input;
 use Request;
 use Response;
-use Assets;
 use View;
 
 class Crud extends BackendController
 {
 	public function index()
 	{
-		//all all recods and paginate the results
+		//all all records and paginate the results
 		$rows = CrudModel::orderby('id', 'desc')->paginate(1);
 		
 		//is there is an ajax call pass back the records as json
@@ -43,7 +43,7 @@ class Crud extends BackendController
 
 	public function loadRecords()
 	{
-		//all all recods and paginate the results
+		//all all records and paginate the results
 	    $rows = CrudModel::orderby('id', 'desc')->paginate(1);
 
 	    $content = View::fetch('Crud/LoadRecords', ['rows' => $rows], 'Crud');

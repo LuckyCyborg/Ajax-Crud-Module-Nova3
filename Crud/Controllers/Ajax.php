@@ -9,8 +9,6 @@ use Response;
 
 class Ajax extends Controller
 {
-	/* Post methods: */
-
 	public function store()
 	{
 		//get form data
