@@ -8,9 +8,11 @@ class Crud extends Model
 {
 	protected $table = 'crud';
 
-	public function __construct()
-	{
-	    DB::statement("CREATE TABLE IF NOT EXISTS `".PREFIX."crud` (
+	protected static function boot()
+    {
+        parent::boot();
+
+        DB::statement("CREATE TABLE IF NOT EXISTS `".PREFIX."crud` (
 		`id` int(11) unsigned NOT NULL AUTO_INCREMENT,
 		`title` varchar(255) DEFAULT NULL,
 		`comment` text DEFAULT NULL,
@@ -18,5 +20,6 @@ class Crud extends Model
 		`updated_at` datetime DEFAULT NULL,
   		PRIMARY KEY (`id`)
 		) DEFAULT CHARSET=utf8;");
-	}
+    }
+
 }
