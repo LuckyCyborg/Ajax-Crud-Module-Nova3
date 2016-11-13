@@ -108,7 +108,7 @@ class Crud extends BackendController
 			}
 
 			// return all our data to an AJAX call
-			echo json_encode($data);
+		    return Response::json($data);
 		}
 	}
 
@@ -128,7 +128,7 @@ class Crud extends BackendController
 			}
 
 			// return all our data to an AJAX call
-			echo json_encode($data);
+		    return Response::json($data);
 		}
 		
 	}
@@ -171,7 +171,7 @@ class Crud extends BackendController
 		    
 
 			// return all our data to an AJAX call
-			echo json_encode($data);
+		    return Response::json($data);
 		}
 	}
 	
@@ -190,7 +190,7 @@ class Crud extends BackendController
 			}
 
 			// return all our data to an AJAX call
-			echo json_encode($data);
+		    return Response::json($data);
 		}
 		
 	}
