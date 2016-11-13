@@ -18,6 +18,7 @@
            		<div id="title-group" class="form-group">
 		            <label class="control-label" for="title">Title</label>
 		            <input type="text" class="form-control" name="title">
+		            <!-- errors will go here -->
 		        </div>
 
 	            <div id="comment-group" class="form-group">
